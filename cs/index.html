@@ -3,11 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PipelineWorks — Kompletní lead pipeline</title>
-<meta name="description" content="Navrhujeme a řídíme celou vaši lead pipeline — kampaň, landing page, formulář, automatizaci, nurturing i předání obchodu — jako jeden propojený systém.">
+<title>PipelineWorks — Kompletní B2B lead pipeline</title>
+<meta name="description" content="Navrhujeme a řídíme celou vaši B2B lead pipeline — kampaň, landing page, formulář, automatizaci, nurturing i předání obchodu — jako jeden propojený systém, aby se žádný lead neztratil mezi marketingem a obchodem.">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+
+<svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="ic-campaign" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l5 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M15 8.5a4 4 0 0 1 0 7"/></symbol>
+  <symbol id="ic-landing" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><circle cx="6.5" cy="6.5" r=".6"/><circle cx="9" cy="6.5" r=".6"/></symbol>
+  <symbol id="ic-form" viewBox="0 0 24 24"><path d="M9 4H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></symbol>
+  <symbol id="ic-automation" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></symbol>
+  <symbol id="ic-nurturing" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="ic-handoff" viewBox="0 0 24 24"><path d="M15 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></symbol>
+  <symbol id="ic-full" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></symbol>
+  <symbol id="ic-audit" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="ic-stages" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+  <symbol id="ic-trend" viewBox="0 0 24 24"><path d="M23 6 13.5 15.5 8.5 10.5 1 18"/><path d="M17 6h6v6"/></symbol>
+  <symbol id="ic-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+</svg>
 
 <header class="site-header">
   <div class="container">
@@ -15,8 +30,8 @@
     <nav>
       <ul class="nav-links">
         <li><a href="#how-it-works">Jak to funguje</a></li>
-        <li><a href="#results">Co říkají data</a></li>
-        <li><a href="#services">Služby</a></li>
+        <li><a href="#results">Data</a></li>
+        <li><a href="#services">Jak pracujeme</a></li>
         <li><a href="#about">O nás</a></li>
         <li class="lang-switch">
           <a href="../en/index.html">EN</a>
@@ -32,9 +47,9 @@
 
 <section class="hero">
   <div class="container">
-    <span class="eyebrow">Kompletní lead pipeline</span>
-    <h1>Propojíme vaši kampaň s dalším zákazníkem.</h1>
-    <p>Většina agentur končí u kliknutí. My navrhujeme a řídíme celou pipeline — kampaň, landing page, formulář, automatizaci, nurturing i předání obchodnímu týmu — jako jeden propojený systém.</p>
+    <span class="eyebrow">Kompletní B2B lead pipeline</span>
+    <h1>Udržíme každý lead v pohybu — od kampaně až po uzavřený obchod.</h1>
+    <p>Většina agentur končí u kliknutí. Naším cílem je průchodnost — proměnit akvizici v konverzi, aniž by se cestou cokoli ztratilo. Navrhujeme a řídíme celou vaši pipeline jako jeden propojený systém, takže se leady nikdy nezaseknou mezi marketingem a obchodem.</p>
     <div class="hero-ctas">
       <a href="#contact" class="btn btn-primary">Rezervovat bezplatný audit pipeline</a>
       <a href="#how-it-works" class="btn btn-ghost">Jak to funguje ↓</a>
@@ -42,11 +57,15 @@
   </div>
 </section>
 
-<section>
+<section id="problem">
   <div class="container">
     <div class="section-head">
+      <span class="eyebrow">Problém</span>
       <h2>Proč se leady ztrácejí</h2>
-      <p>Reklamní agentury vám přivedou kliky. Konzultanti CRM vám nastaví software. Ale leady se ztrácejí přesně na pomezí obou světů — v nejasných formulářích, v automatizacích, o které se nikdo nestará, v leadech, které se dostanou k obchodu příliš brzy nebo příliš pozdě. My tyhle mezery odstraňujeme tím, že řídíme celý tok.</p>
+      <p>Reklamní agentury vám přivedou kliky. CRM konzultanti vám nastaví software. Ale leady se stále ztrácejí v mezerách mezi nimi — formulář, na který nikdo nereaguje, stránka, která nekonvertuje, lead předaný obchodu příliš brzy nebo příliš pozdě. V B2B je právě tohle předání největším zdrojem ztraceného obratu.</p>
+    </div>
+    <div class="definition">
+      Lead pipeline je jen tak silná, jak silný je její nejslabší předávací bod. Jejím úkolem je <strong>průchodnost</strong> — plynule posouvat každý lead od akvizice ke konverzi, aby se hodnota neztratila v žádném jednotlivém kroku. Proto řídíme celý tok, ne jen jednu jeho část.
     </div>
   </div>
 </section>
@@ -54,37 +73,89 @@
 <section class="alt" id="how-it-works">
   <div class="container">
     <div class="section-head">
+      <span class="eyebrow">Systém</span>
       <h2>Jedna propojená pipeline, šest kroků</h2>
       <p>Každý krok navazuje na ten další — žádné volné konce mezi marketingem a obchodem.</p>
     </div>
+
+    <div class="flow">
+      <div class="flow-step">
+        <span class="flow-icon"><svg class="icon"><use href="#ic-campaign"/></svg></span>
+        <span>Kampaň</span>
+      </div>
+      <span class="flow-connector"><svg class="chev icon"><use href="#ic-arrow"/></svg></span>
+      <div class="flow-step">
+        <span class="flow-icon"><svg class="icon"><use href="#ic-landing"/></svg></span>
+        <span>Landing page</span>
+      </div>
+      <span class="flow-connector"><svg class="chev icon"><use href="#ic-arrow"/></svg></span>
+      <div class="flow-step">
+        <span class="flow-icon"><svg class="icon"><use href="#ic-form"/></svg></span>
+        <span>Formulář</span>
+      </div>
+      <span class="flow-connector"><svg class="chev icon"><use href="#ic-arrow"/></svg></span>
+      <div class="flow-step">
+        <span class="flow-icon"><svg class="icon"><use href="#ic-automation"/></svg></span>
+        <span>Automatizace</span>
+      </div>
+      <span class="flow-connector"><svg class="chev icon"><use href="#ic-arrow"/></svg></span>
+      <div class="flow-step">
+        <span class="flow-icon"><svg class="icon"><use href="#ic-nurturing"/></svg></span>
+        <span>Nurturing</span>
+      </div>
+      <span class="flow-connector"><svg class="chev icon"><use href="#ic-arrow"/></svg></span>
+      <div class="flow-step">
+        <span class="flow-icon"><svg class="icon"><use href="#ic-handoff"/></svg></span>
+        <span>Předání obchodu</span>
+      </div>
+    </div>
+
     <div class="funnel">
       <div class="funnel-step">
-        <span class="num">1</span>
+        <div class="step-head">
+          <span class="funnel-ic"><svg class="icon"><use href="#ic-campaign"/></svg></span>
+          <span class="num">01</span>
+        </div>
         <h3>Kampaň</h3>
         <p>Placené i organické kampaně postavené kolem jedné jasné nabídky.</p>
       </div>
       <div class="funnel-step">
-        <span class="num">2</span>
+        <div class="step-head">
+          <span class="funnel-ic"><svg class="icon"><use href="#ic-landing"/></svg></span>
+          <span class="num">02</span>
+        </div>
         <h3>Landing page</h3>
         <p>Rychlé, zaměřené stránky navržené tak, aby konvertovaly, ne jen hezky vypadaly.</p>
       </div>
       <div class="funnel-step">
-        <span class="num">3</span>
+        <div class="step-head">
+          <span class="funnel-ic"><svg class="icon"><use href="#ic-form"/></svg></span>
+          <span class="num">03</span>
+        </div>
         <h3>Formulář</h3>
         <p>Bezbolestné zachycení leadu, které ho rovnou kvalifikuje.</p>
       </div>
       <div class="funnel-step">
-        <span class="num">4</span>
+        <div class="step-head">
+          <span class="funnel-ic"><svg class="icon"><use href="#ic-automation"/></svg></span>
+          <span class="num">04</span>
+        </div>
         <h3>Automatizace</h3>
-        <p>ActiveCampaign (nebo váš CRM) nastavený tak, aby každý lead automaticky otagoval, ohodnotil a nasměroval.</p>
+        <p>Váš CRM a marketingová automatizace nastavené tak, aby každý lead automaticky otagovaly, ohodnotily a nasměrovaly.</p>
       </div>
       <div class="funnel-step">
-        <span class="num">5</span>
+        <div class="step-head">
+          <span class="funnel-ic"><svg class="icon"><use href="#ic-nurturing"/></svg></span>
+          <span class="num">05</span>
+        </div>
         <h3>Nurturing</h3>
-        <p>Časované e-mailové/SMS sekvence, které budují důvěru, dokud není lead připravený koupit.</p>
+        <p>Časované e-mailové sekvence, které budují důvěru, dokud není lead připravený koupit.</p>
       </div>
       <div class="funnel-step">
-        <span class="num">6</span>
+        <div class="step-head">
+          <span class="funnel-ic"><svg class="icon"><use href="#ic-handoff"/></svg></span>
+          <span class="num">06</span>
+        </div>
         <h3>Předání obchodu</h3>
         <p>Kvalifikované leady se dostanou k obchodu s plným kontextem — žádná studená předání.</p>
       </div>
@@ -95,17 +166,24 @@
 <section id="results">
   <div class="container">
     <div class="section-head">
+      <span class="eyebrow">Data</span>
       <h2>Proč funguje vlastnictví celé pipeline</h2>
       <p>Nemusíte věřit jen nám — mluví za to i oborová data.</p>
     </div>
     <div class="stats">
       <div class="stat-card">
-        <div class="stat-number">+47 %</div>
+        <div class="stat-head">
+          <span class="stat-ic"><svg class="icon"><use href="#ic-trend"/></svg></span>
+          <div class="stat-number">+47 %</div>
+        </div>
         <p>Vyšší hodnota nákupů u nurtured leadů oproti leadům bez nurturingu.</p>
         <span class="source">Zdroj: Annuitas Group</span>
       </div>
       <div class="stat-card">
-        <div class="stat-number">+50 %</div>
+        <div class="stat-head">
+          <span class="stat-ic"><svg class="icon"><use href="#ic-target"/></svg></span>
+          <div class="stat-number">+50 %</div>
+        </div>
         <p>Více obchodně připravených leadů za 33% nižší náklady u firem se silným nurturingem.</p>
         <span class="source">Zdroj: Forrester Research</span>
       </div>
@@ -117,45 +195,53 @@
 <section class="alt" id="services">
   <div class="container">
     <div class="section-head">
-      <h2>Co děláme</h2>
-      <p>Vyberte si jeden krok, nebo nám svěřte celou pipeline.</p>
+      <span class="eyebrow">Jak pracujeme</span>
+      <h2>Vezměte si celou pipeline, nebo jen jednu část</h2>
+      <p>Ať už nás zapojíte jakkoli, cíl je stejný: leady, které plynou, a marketingové výdaje, které se promění v pipeline.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
-        <h3>Nastavení kampaní a placená reklama</h3>
-        <p>Kampaně na Google, Meta a LinkedIn postavené kolem jedné jasné nabídky.</p>
+        <div class="service-ic"><svg class="icon"><use href="#ic-full"/></svg></div>
+        <h3>Kompletní pipeline na klíč</h3>
+        <p>Navrhneme, postavíme a provozujeme celý váš tok leadů od začátku do konce — a po spuštění ho dál optimalizujeme.</p>
       </div>
       <div class="service-card">
-        <h3>Landing pages a formuláře</h3>
-        <p>Stránky a formuláře zaměřené na konverzi, které leady rovnou kvalifikují.</p>
+        <div class="service-ic"><svg class="icon"><use href="#ic-audit"/></svg></div>
+        <h3>Audit pipeline</h3>
+        <p>Už máte jednotlivé části? Zmapujeme váš funnel, najdeme přesně, kde leady unikají, a opravíme slabá místa.</p>
       </div>
       <div class="service-card">
-        <h3>Automatizace ActiveCampaign / CRM</h3>
-        <p>Tagování, scoring a routing nastavené tak, aby každý lead šel tam, kam má.</p>
-      </div>
-      <div class="service-card">
-        <h3>Nurturing sekvence</h3>
-        <p>E-mailové a SMS flow, které udrží leady zahřáté, dokud nejsou připravení mluvit.</p>
-      </div>
-      <div class="service-card">
-        <h3>Předání obchodu a reporting</h3>
-        <p>Jasná kritéria a plný kontext, aby obchod nikdy nedostal studený lead.</p>
-      </div>
-      <div class="service-card">
-        <h3>Průběžná optimalizace</h3>
-        <p>Pipeline dál testujeme a ladíme i po spuštění, ne jen na začátku.</p>
+        <div class="service-ic"><svg class="icon"><use href="#ic-stages"/></svg></div>
+        <h3>Jednotlivé kroky</h3>
+        <p>Potřebujete jen jednu část — kampaně, landing page, automatizaci nebo nurturing? Napojíme se na to, co už máte.</p>
       </div>
     </div>
+    <p class="focus-note"><strong>Stavěno pro B2B.</strong> Nejsilnější jsme u zvažovaných, vícekrokových B2B nákupů, kde nejvíc záleží na nurturingu a čistém předání — a stejný playbook funguje i pro hodnotnější B2C.</p>
   </div>
 </section>
 
 <section id="about">
   <div class="container">
     <div class="section-head">
-      <h2>Vytvořeno někým, kdo tohle roky dělal in-house</h2>
+      <span class="eyebrow">Kdo jsme</span>
+      <h2>Váš partner pro propojení marketingu a obchodu</h2>
     </div>
     <div class="about-content">
-      <p>PipelineWorks založil marketér, který léta stavěl a řídil lead pipeline od začátku do konce pro mezinárodní kampaně — a teď přináší stejný playbook firmám, které chtějí, aby marketing a obchod konečně fungovaly jako jeden systém.</p>
+      <p>PipelineWorks stojí na 15 letech praktických zkušeností s řízením lead pipelines pro mezinárodní kampaně — více než 300 kampaní ve více než 20 zemích na několika kontinentech. Z těchto zkušeností jsme vytvořili osvědčený blueprint pro propojení marketingu a obchodu do jednoho systému a přinášíme ho každému klientovi s jediným zaměřením: váš úspěch. Když vaše pipeline funguje, odvedli jsme svou práci.</p>
+      <div class="credentials">
+        <div class="credential">
+          <span class="cred-num">15</span>
+          <span class="cred-label">let zkušeností</span>
+        </div>
+        <div class="credential">
+          <span class="cred-num">300+</span>
+          <span class="cred-label">realizovaných kampaní</span>
+        </div>
+        <div class="credential">
+          <span class="cred-num">20+</span>
+          <span class="cred-label">zemí napříč kontinenty</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -163,6 +249,7 @@
 <section class="contact" id="contact">
   <div class="container">
     <div class="section-head">
+      <span class="eyebrow">Ozvěte se</span>
       <h2>Zmapujme vaši pipeline</h2>
       <p>Řekněte nám, kde se vám dnes leady ztrácejí, a ukážeme vám, jak by mohla vypadat propojená pipeline.</p>
     </div>
