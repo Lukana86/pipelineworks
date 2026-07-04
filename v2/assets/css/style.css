@@ -381,6 +381,56 @@ section { padding: 92px 0; }
   margin: 26px 0 0;
 }
 
+/* Free-review banner */
+.review-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: var(--steel);
+  color: var(--paper);
+  border-radius: var(--radius);
+  padding: 26px 30px;
+  margin-bottom: 30px;
+}
+.review-banner h3 { color: var(--white); font-size: 1.2rem; }
+.review-banner .review-meta {
+  font-family: var(--mono);
+  font-weight: 500;
+  color: var(--signal);
+  font-size: 0.9rem;
+}
+.review-banner p { margin: 8px 0 0; color: #c3cbd6; font-size: 0.96rem; max-width: 640px; }
+.review-banner .btn { flex: none; }
+
+/* Tier hint line */
+.product .hint {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 4px 0 0;
+}
+
+/* Custom / partial-engagement strip */
+.custom-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  flex-wrap: wrap;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  margin-top: 26px;
+}
+.custom-strip p { margin: 0; color: var(--muted); font-size: 0.96rem; max-width: 700px; }
+.custom-strip strong { color: var(--steel); }
+.custom-strip .btn { flex: none; }
+
 /* ============================================================
    Proof / stats
    ============================================================ */
