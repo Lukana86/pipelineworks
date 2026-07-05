@@ -257,7 +257,6 @@ section { padding: 92px 0; }
 .band-dark .schematic .stage-label { fill: var(--paper); }
 .schematic .stage-label { font-size: 12px; fill: var(--steel); font-weight: 500; }
 .schematic .node-ring { fill: var(--steel); stroke: var(--signal); stroke-width: 2; }
-.schematic .node-hit { fill: transparent; cursor: pointer; }
 .schematic .leak-drop { fill: var(--signal); animation: drip 2s ease-in infinite; }
 
 @keyframes flow { to { stroke-dashoffset: -30; } }
@@ -267,40 +266,34 @@ section { padding: 92px 0; }
   100% { transform: translateY(18px); opacity: 0; }
 }
 
-.stage-caption {
-  margin-top: 22px;
-  min-height: 3em;
-  font-size: 1.02rem;
-  color: var(--paper);
+/* Always-visible stage columns, aligned under the pipe nodes */
+.stages {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  margin-top: 18px;
 }
-.stage-caption .cap-label {
-  font-family: var(--mono);
-  color: var(--signal);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+.stage-col {
+  text-align: center;
+  padding: 0 10px;
+}
+.stage-num { display: none; }
+.stage-lbl {
   display: block;
-  margin-bottom: 4px;
-}
-.stage-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 26px;
-}
-.stage-tab {
   font-family: var(--mono);
-  font-size: 0.8rem;
-  padding: 7px 12px;
-  border: 1px solid var(--line-dark);
-  border-radius: var(--radius);
-  background: transparent;
-  color: #c3cbd6;
-  cursor: pointer;
-  transition: all 0.15s ease;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--paper);
+  margin-bottom: 8px;
 }
-.stage-tab:hover { border-color: var(--signal); color: var(--white); }
-.stage-tab.active { background: var(--signal); border-color: var(--signal); color: var(--white); }
+.stage-col p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #b7bfca;
+}
 
 /* ============================================================
    Products / pricing ladder
@@ -460,6 +453,48 @@ section { padding: 92px 0; }
   color: #8b95a2;
   margin: 24px 0 0;
 }
+
+/* Proof blocks: global data + our results */
+.proof-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.proof-block {
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  background: var(--steel-2);
+}
+.proof-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--signal);
+  margin: 0 0 16px;
+}
+.proof-block .figure {
+  font-family: var(--mono);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  color: var(--signal);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.proof-figures {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.proof-block > p {
+  margin: 14px 0 0;
+  color: #c3cbd6;
+  font-size: 0.98rem;
+}
+.proof-block .src { color: #8b95a2; }
 
 /* ============================================================
    Why (two columns) + certs
@@ -679,6 +714,61 @@ section { padding: 92px 0; }
   .hero { padding: 76px 0 64px; }
 }
 
+/* Schematic: vertical list on mobile (pipe runs vertically) */
+@media (max-width: 700px) {
+  .schematic.pipe-h { display: none; }
+  .stages {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 8px;
+  }
+  .stages::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    bottom: 22px;
+    width: 3px;
+    background: #46586a;
+    border-radius: 2px;
+  }
+  .stages::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    bottom: 22px;
+    width: 3px;
+    background: repeating-linear-gradient(to bottom, var(--signal) 0 3px, transparent 3px 15px);
+    animation: flowY 1.4s linear infinite;
+  }
+  .stage-col {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    text-align: left;
+    padding: 0 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .stage-num {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    flex: none;
+    border-radius: 50%;
+    background: var(--steel);
+    border: 2px solid var(--signal);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 0.9rem;
+  }
+  .stage-lbl { margin-bottom: 4px; }
+}
+@keyframes flowY { to { background-position: 0 18px; } }
+
 /* ============================================================
    Reduced motion
    ============================================================ */
@@ -686,5 +776,6 @@ section { padding: 92px 0; }
   html { scroll-behavior: auto; }
   .schematic .pipe-flow { animation: none; stroke-dasharray: 0; }
   .schematic .leak-drop { animation: none; opacity: 0.9; }
+  .stages::after { animation: none; }
   * { transition: none !important; }
 }

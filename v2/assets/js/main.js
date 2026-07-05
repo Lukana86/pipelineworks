@@ -49,30 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  /* ---- Schematic: stage tabs drive the caption ---- */
-  var caption = document.querySelector(".stage-caption");
-  var tabs = document.querySelectorAll(".stage-tab");
-  function activate(tab) {
-    tabs.forEach(function (t) { t.classList.remove("active"); });
-    tab.classList.add("active");
-    if (caption) {
-      caption.innerHTML =
-        '<span class="cap-label">' + tab.textContent + "</span>" +
-        (tab.getAttribute("data-desc") || "");
-    }
-  }
-  tabs.forEach(function (tab) {
-    tab.addEventListener("click", function () { activate(tab); });
-  });
-  // Clicking a node inside the SVG activates the matching tab
-  document.querySelectorAll(".schematic .node-hit").forEach(function (node) {
-    node.addEventListener("click", function () {
-      var i = parseInt(node.getAttribute("data-stage"), 10);
-      if (tabs[i]) { activate(tabs[i]); }
-    });
-  });
-  if (tabs.length) { activate(tabs[0]); }
-
   /* ---- Lead form -> Formspree (no backend) ---- */
   if (form) {
     form.setAttribute("action", FORMSPREE_ENDPOINT);
