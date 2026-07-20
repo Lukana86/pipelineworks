@@ -224,7 +224,7 @@ section { padding: 92px 0; }
    ============================================================ */
 .leak-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
   margin-top: 40px;
 }
@@ -264,6 +264,15 @@ section { padding: 92px 0; }
   0% { transform: translateY(0); opacity: 0; }
   30% { opacity: 1; }
   100% { transform: translateY(18px); opacity: 0; }
+}
+
+@media (max-width: 1000px) {
+  .leak-cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .leak-cards { grid-template-columns: 1fr; }
+  #problem .schematic { display: none; }
 }
 
 /* Always-visible stage columns, aligned under the pipe nodes */

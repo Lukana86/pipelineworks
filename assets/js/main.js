@@ -16,14 +16,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* ---- Booking CTAs -> Cal.com (single constant) ---- */
+  /* ---- Booking CTAs -> scroll to contact section ---- */
+  var contactSection = document.getElementById("contact");
+  if (!contactSection) {
+    var contactForm = document.querySelector(".lead-form");
+    var contactFormSection = contactForm ? contactForm.closest("section") : null;
+    if (contactFormSection) {
+      contactFormSection.setAttribute("id", "contact");
+      contactSection = contactFormSection;
+    }
+  }
+
   document.querySelectorAll(".js-book").forEach(function (el) {
-    el.setAttribute("href", CAL_URL);
-    el.setAttribute("target", "_blank");
-    el.setAttribute("rel", "noopener");
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+    el.setAttribute("href", "#contact");
   });
   var calFallback = document.querySelector(".js-cal-fallback");
-  if (calFallback) { calFallback.setAttribute("href", CAL_URL); }
+  if (calFallback) { calFallback.setAttribute("href", "#contact"); }
 
   /* ---- "Order the audit" CTAs -> scroll to form, preselect interest ---- */
   var form = document.querySelector(".lead-form");
@@ -39,13 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
         var first = form ? form.querySelector("input, textarea") : null;
         if (first) { setTimeout(function () { first.focus(); }, 400); }
       }
-    });
-  });
-
-  /* ---- FAQ accordion ---- */
-  document.querySelectorAll(".faq-q").forEach(function (q) {
-    q.addEventListener("click", function () {
-      q.parentElement.classList.toggle("open");
     });
   });
 
