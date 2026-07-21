@@ -286,11 +286,18 @@
       <line x1="436" y1="104" x2="564" y2="104" stroke="var(--signal)" stroke-width="10" stroke-linecap="round"/>
     </svg>
     <div>
-        <form class="lead-form" novalidate>
+        <form class="lead-form" method="POST" action="https://api.web3forms.com/submit">
+          <input type="hidden" name="access_key" value="4d1c62d3-6135-477d-a949-b0a7dc54369f">
+          <input type="hidden" name="subject" value="Nová poptávka z pipelineworks.io">
           <input type="hidden" name="interest" value="general">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
           <div>
             <label for="f-name">Jméno</label>
             <input id="f-name" name="name" type="text" required>
+          </div>
+          <div>
+            <label for="f-email">E-MAIL</label>
+            <input id="f-email" name="email" type="email" required>
           </div>
           <div>
             <label for="f-company">Firma</label>
@@ -298,10 +305,10 @@
           </div>
           <div>
             <label for="f-url">Web (URL)</label>
-            <input id="f-url" name="website" type="url" placeholder="https://">
+            <input id="f-url" name="website" type="text" inputmode="url" placeholder="napr. firma.cz">
           </div>
           <div>
-            <label for="f-msg">Kde vás pipeline nejvíc bolí?</label>
+            <label for="f-msg">Kde vám nejvíc utíkají obchodní příležitosti?</label>
             <textarea id="f-msg" name="message"></textarea>
           </div>
           <div>
@@ -309,9 +316,10 @@
             <label for="marketing-consent">Souhlasím se zasíláním obchodních sdělení a se zařazením mého kontaktu do e-mailové komunikace PipelineWorks. Souhlas mohu kdykoli odvolat.</label>
           </div>
           <button type="submit" class="btn btn-primary">Odeslat</button>
-          <p class="email-fallback">Odesláním formuláře berete na vědomí zpracování osobních údajů podle <a href="pravni-udaje.html">Právních údajů</a>.</p>
+          <p class="email-fallback">Odesláním formuláře berete na vědomí zpracování osobních údajů podle <a href="ochrana-osobnich-udaju.html">Ochrany osobních údajů</a>.</p>
         </form>
-        <div class="form-success">Díky, ozveme se do jednoho pracovního dne.</div>
+        <div class="form-error" role="alert"></div>
+        <div class="form-success">Děkujeme, ozveme se do jednoho pracovního dne.</div>
         <p class="email-fallback">Radši e-mail? <a href="mailto:hello@pipelineworks.io">hello@pipelineworks.io</a></p>
       </div>
     </div>
@@ -329,7 +337,7 @@
         <a href="../en/">EN</a>
         <a href="../cs/" class="active">CS</a>
       </span>
-      <a href="pravni-udaje.html">Právní údaje</a>
+      <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
       <span>© 2026</span>
     </div>
   </div>
